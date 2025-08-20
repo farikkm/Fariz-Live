@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/styles/fonts.css" />
+    <link rel="stylesheet" href="./src/assets/styles/main.css" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__logo">
+          <h3>Fariz</h3>
+          <img src="/icons/all-right-reserved.svg" alt="all-right-reserved" />
+        </div>
+
+        <nav class="header__menu">
+          <ul class="header__list">
+            <li class="header__item">
+              <a data-link href="/" class="header__link">Home</a>
+            </li>
+            <li class="header__item">
+              <a data-link href="/projects" class="header__link"
+                ><span id="project-quantity">20</span>Projects
+              </a>
+            </li>
+            <li class="header__item">
+              <a data-link href="/about" class="header__link">About</a>
+            </li>
+            <li class="header__item">
+              <a data-link href="/contacts" class="header__link"> Contacts </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main id="app"></main>
+
+      <footer></footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
