@@ -41,12 +41,12 @@ async function loadPageAssets(pageName) {
   // Inject CSS
   const css = document.createElement("link");
   css.rel = "stylesheet";
-  css.href = `/src/pages/${pageName}/${pageName}.css`;
+  css.href = `/pages/${pageName}/${pageName}.css`;
   css.setAttribute("data-route-asset", "");
   document.head.appendChild(css);
 
   // Fetch and render HTML
-  const htmlRes = await fetch(`/src/pages/${pageName}/${pageName}.html`, {
+  const htmlRes = await fetch(`/pages/${pageName}/${pageName}.html`, {
     cache: "no-cache",
   });
 
@@ -58,7 +58,7 @@ async function loadPageAssets(pageName) {
   try {
     const mod = await import(
       /* @vite-ignore */
-      `/src/pages/${pageName}/${pageName}.js?ts=${Date.now()}`
+      `/pages/${pageName}/${pageName}.js?ts=${Date.now()}`
     );
     return mod;
   } catch (e) {
