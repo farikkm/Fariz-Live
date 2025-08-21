@@ -1,10 +1,243 @@
-h1 {
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
-  margin: 0 0 12px;
+.hero {
+  margin-top: 20px;
 }
-button {
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: 1px solid #0003;
-  cursor: pointer;
+.hero__title {
+  display: block;
+  max-width: 260px;
+  margin: 0 auto;
+
+  font-size: var(--heading-2);
+}
+.hero__button {
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin-top: 16px;
+  margin-left: auto;
+}
+.hero__content {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 9px; /* optional */
+}
+.hero__contact > h3 {
+  margin-bottom: 9px;
+}
+.hero__contact > span {
+  font-family: var(--reserve-font);
+  font-size: 14px;
+}
+.hero__overview {
+  max-width: 207px;
+  font-family: var(--reserve-font);
+}
+
+/* =============================> Projects <================================ */
+
+.projects {
+  margin-top: 55px;
+}
+.projects__header {
+  margin-bottom: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-projects__button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header-projects__button > img {
+  margin-top: 2px;
+}
+
+.projects__items {
+  margin-top: 32px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 20px;
+}
+.item-project__img {
+  margin-bottom: 3px;
+  max-width: 100%;
+}
+.item-project__title {
+  margin-bottom: 3px;
+}
+.item-project__desc {
+  font-family: var(--reserve-font);
+}
+
+.expertise {
+  margin-top: 50px;
+}
+.expertise__articles {
+  margin-top: 15px;
+  padding: 0 15px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.expertise__article {
+  list-style-type: disc;
+}
+.article-expertise__text {
+  font-family: var(--reserve-font);
+  margin-top: 15px;
+}
+
+/* ====================================== */
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  background: #000;
+  padding: 15px 0;
+  position: relative;
+  margin-top: 50px;
+}
+
+.marquee__text {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: var(--heading-2);
+}
+
+/* ===================================== */
+.testimonials {
+  margin-top: 32px;
+}
+
+.testimonials__items {
+  margin-top: 32px;
+
+  max-width: 720px;
+  width: 100%;
+  display: grid;
+  gap: 16px;
+}
+
+/* Компонент отзыва */
+.testimonials__item {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.testimonials__item header {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid var(--border);
+  display: grid;
+  place-content: center;
+  font-size: 12px;
+  color: var(--bg);
+  user-select: none;
+}
+
+.who {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.name {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.rating {
+  font-feature-settings: "tnum" 1;
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  color: #000;
+}
+
+blockquote {
+  margin: 0;
+  font-size: 15px;
+}
+
+.testimonials__footer {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+}
+
+.tag {
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Вариант компактной карточки */
+.testimonials__item.compact {
+  padding: 14px;
+}
+.testimonials__item.compact header {
+  grid-template-columns: 32px 1fr auto;
+  margin-bottom: 8px;
+}
+.testimonials__item.compact .avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 11px;
+}
+.testimonials__item.compact blockquote {
+  font-size: 14px;
+}
+
+/* Список отзывов */
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 720px) {
+  .list.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

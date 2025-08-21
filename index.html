@@ -14,35 +14,62 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="header__logo">
-          <h3>Fariz</h3>
-          <img src="/icons/all-right-reserved.svg" alt="all-right-reserved" />
-        </div>
+      <div class="container">
+        <header class="header">
+          <a data-link href="/" class="header__logo">
+            <h3>Fariz</h3>
+            <img src="/icons/all-right-reserved.svg" alt="all-right-reserved" />
+          </a>
 
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li class="header__item">
-              <a data-link href="/" class="header__link">Home</a>
-            </li>
-            <li class="header__item">
-              <a data-link href="/projects" class="header__link"
-                ><span id="project-quantity">20</span>Projects
-              </a>
-            </li>
-            <li class="header__item">
-              <a data-link href="/about" class="header__link">About</a>
-            </li>
-            <li class="header__item">
-              <a data-link href="/contacts" class="header__link"> Contacts </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+          <nav class="header__menu">
+            <ul class="header__list">
+              <li class="header__item">
+                <a data-link href="/" class="header__link">Home</a>
+              </li>
+              <li class="header__item">
+                <a data-link href="/projects" class="header__link"
+                  ><span id="project-quantity">20</span>Projects
+                </a>
+              </li>
+              <li class="header__item">
+                <a data-link href="/about" class="header__link">About</a>
+              </li>
+              <li class="header__item">
+                <a data-link href="/contacts" class="header__link">
+                  Contacts
+                </a>
+              </li>
+            </ul>
 
+            <div class="header__menu_button">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </nav>
+        </header>
+      </div>
       <main id="app"></main>
 
-      <footer></footer>
+      <footer class="footer">
+        <div class="container">
+          <h2 class="footer__title">Let’s talk!</h2>
+          <a href="https://t.me/minnaroo" target="_blank" class="footer__link"
+            >@minnaroo</a
+          >
+
+          <div class="footer__bottom">
+            <p class="footer__copyright">2023 © — Made by Djectstudio</p>
+
+            <div class="footer__socials">
+              <a href="https://www.instagram.com/farikk0/" target="_blank"
+                >Instagram</a
+              >
+              <a href="https://github.com/farikkm" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script type="module" src="/src/main.js"></script>

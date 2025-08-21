@@ -5,10 +5,10 @@
 }
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   --basic-font: "Labil Grotesk";
-  --reserve-font: Arial, Helvetica, sans-serif;
+  --reserve-font: "Labil Grotesk Regular";
   /* Fonts */
   --text-2xl: 190px;
   --text-xl: 140px;
@@ -26,6 +26,26 @@
   --success-color: #29ae29;
   --warning-color: #ffc62a;
   --error-color: #ef4444;
+
+  --bg: #ffffff;
+  --fg: #0f172a; /* slate-900 */
+  --muted: #475569; /* slate-600 */
+  --border: #e2e8f0; /* slate-200 */
+  --accent: #0ea5e9; /* sky-500 */
+  --card: #f8fafc; /* slate-50 */
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --fg: #e5e7eb; /* gray-200 */
+    --muted: #94a3b8; /* slate-400 */
+    --border: #1f2937; /* gray-800 */
+    --accent: #38bdf8; /* sky-400 */
+    --card: #0f172a; /* slate-900 */
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
 }
 
 /* ===================== Base Styles ===================== */
@@ -36,7 +56,12 @@ body {
   font-weight: 400;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 a {
+  color: #000;
   text-decoration: none;
 }
 
@@ -52,7 +77,8 @@ ul {
 .wrapper {
   width: 100%;
   height: 100%;
-  padding: 24px 0;
+
+  padding-bottom: 30px;
 
   overflow: hidden;
 }
@@ -68,6 +94,13 @@ ul {
 }
 
 /* ================== Header =================== */
+.header {
+  display: flex;
+  align-items: center;
+
+  padding: 16px 0;
+}
+
 .header__logo {
   display: flex;
   justify-content: center;
@@ -78,31 +111,42 @@ ul {
   font-size: var(--heading-4);
 }
 
-.header__menu {
-  width: min-content;
-  border-radius: 24px;
-
-  background-color: #000;
-  padding: 3px;
-  margin: 24px auto;
-}
-.header__list {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.header__item {
-  border-radius: 24px;
-
-  transition: all 0.3s ease-in;
-}
-
 #project-quantity {
   font-size: 8px;
   padding: 3px;
   border-radius: 50%;
   background-color: var(--gray-text-color);
   color: var(--main-text-color);
+}
+
+.header__menu {
+  margin-left: auto;
+}
+
+.header__menu._active .header__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  background-color: #000;
+}
+
+.header__menu._active .header__list .header__link {
+  font-size: 32px;
+}
+
+.header__list {
+  display: none;
 }
 
 .header__item._active {
@@ -121,4 +165,96 @@ ul {
   display: flex;
   align-items: flex-start;
   gap: 4px;
+}
+
+.header__menu_button {
+  position: relative;
+  z-index: 2;
+
+  padding: 13px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  background-color: #000;
+  border-radius: 24px;
+
+  cursor: pointer;
+}
+
+.header__menu_button > div {
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 9px;
+}
+
+/* ======================================= */
+
+.footer {
+  margin-top: 35px;
+}
+.footer__title {
+  font-size: var(--heading-2);
+  text-align: center;
+}
+.footer__link {
+  display: block;
+
+  width: min-content;
+
+  margin: 35px auto 0px auto;
+  padding: 20px 45px;
+
+  border-radius: 50px;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+}
+.footer__bottom {
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer__bottom > * {
+  font-family: var(--reserve-font);
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer__socials > * {
+  text-decoration: underline;
+}
+
+@media (min-width: 420px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .header__list {
+    display: flex;
+  }
+  .header__menu {
+    width: min-content;
+    border-radius: 24px;
+
+    background-color: #000;
+    padding: 3px;
+    margin-left: 0;
+  }
+  .header__item {
+    border-radius: 24px;
+
+    transition: all 0.3s ease-in;
+  }
+  .header__menu_button {
+    display: none;
+  }
 }

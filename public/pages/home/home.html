@@ -1,5 +1,188 @@
-<section>
-  <h1>Welcome 👋</h1>
-  <p>This is the Home page. Links in the top nav are SPA-navigated.</p>
-  <button id="go-movie">Go to movie #7</button>
-</section>
+<div id="home-page">
+  <div class="container">
+    <section class="hero">
+      <h1 class="hero__title">Websites& WebApps</h1>
+      <button id="scroll-down-btn" class="hero__button">
+        <span>Scroll Down</span>
+        <img src="/icons/arrow-down.svg" alt="arrow-down" />
+      </button>
+      <div class="hero__content">
+        <div class="hero__contact">
+          <h3>Let’s Talk</h3>
+          <span>farikk.v.2@gmail.com</span>
+        </div>
+        <p class="hero__overview">
+          Hi, there. I'm Fariz, a full-stack developer specializing on creating
+          modern and user-friendly interfaces on the web!
+        </p>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="projects__header header-projects">
+        <h2 class="header-projects__title">Projects</h2>
+        <div class="header-projects__button">
+          <span>More</span>
+          <img src="/icons/arrow-right.svg" alt="arrow-right" />
+        </div>
+      </div>
+
+      <!-- <p class="projects__text">
+      As an experienced developer of modern, intuitive websites and digital
+      products, I want to help you build the brand of your dreams.
+    </p> -->
+
+      <div class="projects__items">
+        <article class="project__item item-project">
+          <img
+            class="item-project__img"
+            src="/src/assets/images/projects-card.png"
+            alt=""
+          />
+          <h3 class="item-project__title">Tansto</h3>
+          <span class="item-project__desc">Web Design</span>
+        </article>
+        <article class="project__item item-project">
+          <img
+            class="item-project__img"
+            src="/src/assets/images/projects-card.png"
+            alt=""
+          />
+          <h3 class="item-project__title">Tansto</h3>
+          <span class="item-project__desc">Web Design</span>
+        </article>
+        <article class="project__item item-project">
+          <img
+            class="item-project__img"
+            src="/src/assets/images/projects-card.png"
+            alt=""
+          />
+          <h3 class="item-project__title">Tansto</h3>
+          <span class="item-project__desc">Web Design</span>
+        </article>
+        <article class="project__item item-project">
+          <img
+            class="item-project__img"
+            src="/src/assets/images/projects-card.png"
+            alt=""
+          />
+          <h3 class="item-project__title">Tansto</h3>
+          <span class="item-project__desc">Web Design</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="expertise">
+      <h2 class="expertise__title">Expertise</h2>
+
+      <ul class="expertise__articles">
+        <li class="expertise__article article-expertise">
+          <h3 class="article-expertise__title">Front-end</h3>
+          <p class="article-expertise__text">
+            I have been working in this field for over 4 years. I know all the
+            basics of building a website correctly so that it looks clear and
+            beautiful. Knowing these basics will help put your website on top 1
+            in search results
+          </p>
+        </li>
+        <li class="expertise__article article-expertise">
+          <h3 class="article-expertise__title">Back-end</h3>
+          <p class="article-expertise__text">
+            Along with studying frontend development, I have written my own
+            backend code more than once. I will be able to build a reliable
+            backend service so that everything works smoothly and safely.
+          </p>
+        </li>
+        <li class="expertise__article article-expertise">
+          <h3 class="article-expertise__title">Databases</h3>
+          <p class="article-expertise__text">
+            Since the backend is inseparably connected with databases, I have
+            basic knowledge of databases. I can build a database of any
+            complexity.
+          </p>
+        </li>
+        <li class="expertise__article article-expertise">
+          <h3 class="article-expertise__title">Overall</h3>
+          <p class="article-expertise__text">
+            In general, i can bring any of your crazy business ideas to life.
+            waiting for your message 😉
+          </p>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="marquee">
+    <div class="marquee__text">
+      Visual design for digital experiences. Visual design for digital
+      experiences. Visual design for digital experiences
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="testimonials">
+      <h2 class="testimonials__title">Testimonials</h2>
+
+      <div class="testimonials__items">
+        <figure class="testimonials__item" aria-label="Отзыв пользователя">
+          <header>
+            <div class="avatar" aria-hidden="true">MT</div>
+            <div class="who">
+              <div class="name">Michael T.</div>
+              <div class="meta">Blog site</div>
+            </div>
+            <div class="rating" aria-label="Оценка 5 из 5">★★★★★ 5.0</div>
+          </header>
+          <blockquote>
+            "I really liked how the navigation was done: everything is fast and
+            without reloading the page. The design is minimalistic and modern,
+            it is convenient to read articles even from a phone. A great
+            experience for a blog!”
+          </blockquote>
+          <figcaption class="testimonials__footer">
+            <span>10 august 2025</span>
+            <span class="tag">Project: Blog Site</span>
+          </figcaption>
+        </figure>
+        <figure class="testimonials__item" aria-label="Отзыв пользователя">
+          <header>
+            <div class="avatar" aria-hidden="true">ZS</div>
+            <div class="who">
+              <div class="name">Zarina S.</div>
+              <div class="meta">Movie site</div>
+            </div>
+            <div class="rating" aria-label="Оценка 5 из 5">★★★★★ 5.0</div>
+          </header>
+          <blockquote>
+            "The project impressed me: there is a search for films, you can add
+            to favorites. Everything works quickly, the interface is similar to
+            real streaming services. You can feel the attention to detail!”
+          </blockquote>
+          <figcaption class="testimonials__footer">
+            <span>21 august 2025</span>
+            <span class="tag">Project: Movie Site</span>
+          </figcaption>
+        </figure>
+        <figure class="testimonials__item" aria-label="Отзыв пользователя">
+          <header>
+            <div class="avatar" aria-hidden="true">ShE</div>
+            <div class="who">
+              <div class="name">Shakhzod E.</div>
+              <div class="meta">Courier app</div>
+            </div>
+            <div class="rating" aria-label="Оценка 5 из 5">★★★★★ 5.0</div>
+          </header>
+          <blockquote>
+            "The search functionality works great, the results are displayed
+            instantly. The design is nice, everything is structured. It is clear
+            that the project can grow into a full-fledged service for orders.”
+          </blockquote>
+          <figcaption class="testimonials__footer">
+            <span>10 april 2025</span>
+            <span class="tag">Project: Courier App</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+</div>
