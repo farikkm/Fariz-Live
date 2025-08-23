@@ -7,14 +7,17 @@ const projectsDisplay = document.querySelectorAll(".item-project");
 const projectImages = document.querySelectorAll(".item-project__img");
 
 export function init() {
+  let imageId = 1;
   const interval = setInterval(move, 12);
 
   for (const image of projectImages) {
-    image.src = "/src/assets/images/projects-card.webp";
+    image.src = `/images/projects/0${imageId}.webp`;
     image.style.height = "auto";
     image.style.width = "100%";
     image.style.maxWidth = "100%";
     image.classList.remove("skeleton");
+
+    imageId++;
   }
 
   scrollDownBtn.addEventListener("click", () =>
@@ -35,6 +38,17 @@ export function init() {
       marquee.style.transform = "translateX(" + currentTX + "px)";
     }
   }
+
+  async function loadPreviews() {
+    const res = await fetch(
+      "https://api.github.com/repos/farikkm/Positivus/contents",
+    );
+    const files = await res.json();
+
+    console.log(files);
+  }
+
+  loadPreviews();
 }
 
 export function destroy() {

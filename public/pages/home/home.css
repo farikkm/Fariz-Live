@@ -119,6 +119,9 @@
   height: 300px;
 
   margin-bottom: 3px;
+
+  border: 1px solid #eee;
+  border-radius: 8px;
 }
 
 .item-project__title {
