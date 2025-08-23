@@ -3,21 +3,53 @@ const marqueeWrapper = document.querySelector(".marquee"),
   marquee = document.querySelector(".marquee__text"),
   marqueeWrapperWidth = marqueeWrapper.offsetWidth,
   marqueeWidth = marquee.scrollWidth;
-const projectsDisplay = document.querySelectorAll(".item-project");
 const projectImages = document.querySelectorAll(".item-project__img");
+const projectsWrapper = document.querySelector(".projects__items");
+
+const projects = [
+  {
+    link: "http://95.47.125.157:9999/ru/",
+    title: "Family Park",
+    img: "/images/projects/01.webp",
+    desc: "Web app for shopping mall",
+  },
+  {
+    link: "https://yes-express-kohl.vercel.app/",
+    title: "Yes Express",
+    img: "/images/projects/02.webp",
+    desc: "Web app for courier app",
+  },
+  {
+    link: "https://recipe-app-gules-pi.vercel.app/",
+    title: "Recipes App",
+    img: "/images/projects/03.webp",
+    desc: "Web app for searching recipes",
+  },
+  {
+    link: "https://weather-app-rho-indol-59.vercel.app/",
+    title: "Weather App",
+    img: "/images/projects/04.webp",
+    desc: "Web app for tracking current weather condition",
+  },
+];
+
+const createProjectCard = (project) => {
+  return `
+    <a href="${project.link}" style="display: block" target="_blank" class="project__item item-project">
+      <img class="item-project__img skeleton" src="${project.img}" style="width: 100%; height: auto" alt="project-image" />
+      <h4 class="item-project__title">${project.title}</h4>
+      <span class="item-project__desc">${project.desc}</span>
+    </a>
+  `;
+};
 
 export function init() {
-  let imageId = 1;
   const interval = setInterval(move, 12);
 
-  for (const image of projectImages) {
-    image.src = `/images/projects/0${imageId}.webp`;
-    image.style.height = "auto";
-    image.style.width = "100%";
-    image.style.maxWidth = "100%";
-    image.classList.remove("skeleton");
-
-    imageId++;
+  projectsWrapper.innerHTML = "";
+  for (const project of projects) {
+    const projectCard = createProjectCard(project);
+    projectsWrapper.insertAdjacentHTML("beforeend", projectCard);
   }
 
   scrollDownBtn.addEventListener("click", () =>
