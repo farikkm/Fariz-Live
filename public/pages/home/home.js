@@ -14,22 +14,22 @@ const projects = [
     desc: "Web app for shopping mall",
   },
   {
-    link: "https://yes-express-kohl.vercel.app/",
+    link: "https://yesexpress.uz/",
     title: "Yes Express",
     img: "/images/projects/02.webp",
     desc: "Web app for courier app",
   },
   {
-    link: "https://recipe-app-gules-pi.vercel.app/",
-    title: "Recipes App",
+    link: "https://hexatech.uz/en",
+    title: "Hexatech",
     img: "/images/projects/03.webp",
-    desc: "Web app for searching recipes",
+    desc: "web application for cybersecurity courses",
   },
   {
-    link: "https://weather-app-rho-indol-59.vercel.app/",
-    title: "Weather App",
+    link: "https://positivus-three-cyan.vercel.app/",
+    title: "Positivus",
     img: "/images/projects/04.webp",
-    desc: "Web app for tracking current weather condition",
+    desc: "Beatiful and Pixel-Perfect Landing Page",
   },
 ];
 
