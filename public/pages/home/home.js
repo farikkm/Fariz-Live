@@ -8,7 +8,7 @@ const projectsWrapper = document.querySelector(".projects__items");
 
 const projects = [
   {
-    link: "https://family-park-2.vercel.app/ru/",
+    link: "https://family-park-2.vercel.app/",
     title: "Family Park",
     img: "/images/projects/01.webp",
     desc: "Web app for shopping mall",
