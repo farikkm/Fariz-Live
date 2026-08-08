@@ -8,19 +8,19 @@ const projectsWrapper = document.querySelector(".projects__items");
 
 const projects = [
   {
-    link: "http://95.47.125.157:9999/ru/",
+    link: "https://family-park-2.vercel.app/ru/",
     title: "Family Park",
     img: "/images/projects/01.webp",
     desc: "Web app for shopping mall",
   },
   {
-    link: "https://yesexpress.uz/",
+    link: "https://yes-express-kohl.vercel.app/",
     title: "Yes Express",
     img: "/images/projects/02.webp",
     desc: "Web app for courier app",
   },
   {
-    link: "https://hexatech.uz/en",
+    link: "https://hexatech-gamma.vercel.app/",
     title: "Hexatech",
     img: "/images/projects/03.webp",
     desc: "web application for cybersecurity courses",
