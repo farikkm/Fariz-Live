@@ -31,7 +31,6 @@
   --card: #f8fafc;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
 
-  --heading-1: 48px;
   --heading-2: 24px;
   --heading-3: 20px;
 }
@@ -39,7 +38,6 @@
 /* Tablet */
 @media (min-width: 768px) {
   :root {
-    --heading-1: 84px;
     --heading-2: 32px;
     --heading-3: 24px;
 
@@ -52,7 +50,6 @@
 /* Desktop */
 @media (min-width: 1440px) {
   :root {
-    --heading-1: 227px;
     --heading-2: 48px;
     --heading-3: 32px;
 
@@ -98,10 +95,6 @@ button {
 
 ul {
   list-style: none;
-}
-
-h1 {
-  font-size: var(--heading-1);
 }
 
 h2 {
